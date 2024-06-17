@@ -1,0 +1,97 @@
+<section class="h-100 gradient-custom">
+    <div class="container py-3">
+      <div class="row d-flex justify-content-center my-4">
+        <div class="col-md-7">
+          <div class="card mb-4">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Products List</h5>
+              </div>
+            <div id="product-list">
+                <div *ngFor="let pro of Allproducts" class="card-body">
+                  <!-- Single item -->
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                      <!-- Image -->
+                      <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                        <img src="{{imageUrl}}{{pro.picByte}}" height="100px" width="100px" *ngIf="imageUrl" alt="failed">
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                        </a>
+                      </div>
+                      <!-- Image -->
+                    </div>
+      
+                    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                      <p><strong>Title: </strong> {{pro.title}}</p>
+                      <p><strong>Price: </strong>{{pro.unitprice | currency:"INR":"symbol"}}</p>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: row; margin-top: 20px;" class="col-lg-20 col-md-10 mb-10 mb-lg-0">
+                        <button (click)="addToCart(pro, pro.unitprice)"  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-sm me-1 mb-2" data-mdb-tooltip-init
+                        title="Remove item">
+                        Add To Cart
+                      </button>
+                      <!-- Quantity -->
+                      <div class="d-flex mb-9" style="max-width: 300px">
+                        <div data-mdb-input-init class="form-outline">
+                          <input id="form1" min="0" name="quantity" value="{{pro.quantity}}" type="number" class="form-control"  readonly/>
+                          <label class="form-label" for="form1">Quantity</label>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-5">
+        <div class="card mb-4">
+          <div class="card-header py-1">
+            <h5 style="float: left; clear: both;" class="mb-0">Cart</h5>
+            <p style="float: right;" id="cartAmount"><strong>Total Amount: </strong>${{ getTotal() }}</p>
+          </div>
+          <div id="cart-list">
+            <div *ngFor="let pro of cart; let i = index" class="card-body">
+              <!-- Single item -->
+              <div class="row">
+                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                  <!-- Image -->
+                  <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                    <img src="{{imageUrl}}{{pro.picByte}}" height="60px" width="60px" *ngIf="imageUrl" alt="failed">
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                    </a>
+                  </div>
+                  <!-- Image -->
+                </div>
+  
+                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                  <p><strong>Title: </strong> {{pro.title}}</p>
+                  <p><strong>Price: </strong>{{pro.totalPrice | currency:"INR":"symbol"}}</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: row; margin-top: 10px;" class="col-lg-20 col-md-10 mb-10 mb-lg-0">
+                    <button (click)="removeCart(i)"  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger btn-sm me-1 mb-2" data-mdb-tooltip-init
+                    title="Remove item">
+                    Remove
+                  </button>
+                  <!-- Quantity -->
+                  <div class="d-flex mb-9" style="max-width: 300px">
+                    <div data-mdb-input-init class="form-outline">
+                      <button (click)="increaseQuantity(i)">+</button>
+                      <input id="quantity" min="0" name="quantity" value="{{pro.quantity}}" type="number" class="form-control" readonly/>
+                      <button (click)="decreaseQuantity(i)">-</button>
+                      <label class="form-label" for="form1">Quantity</label>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4" />
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>

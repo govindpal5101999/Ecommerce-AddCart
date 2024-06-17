@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ecommerce.Ecommerce.cartRepository"/>
+    <fullyQualifiedTypeName name="ecommerce.Ecommerce.cartModel"/>
+    <fullyQualifiedTypeName name="ecommerce.Ecommerce.model.cartModel"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="ecommerce.Ecommerce.repository.cartRepository"/>
+    <fullyQualifiedTypeName name="ecommerce.model.cartModel"/>
+    <fullyQualifiedTypeName name="ecommerce.repository.cartRepository"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Govind\Documents\PERSONAL\Github_Projects\Ecommerce_Application\Ecommerce_Backend"/>
+			<item value="C:\Users\gpmt819\Downloads\Ecommerce_Application-20240617T125801Z-001\Ecommerce_Application\Ecommerce_Backend"/>
+			<item value="C:\Users\gpmt819\Downloads\Ecommerce_Application-20240617T125801Z-001\Ecommerce_Application"/>
+			<item value="C:\Users\gpmt819\Downloads\Ecommerce_Application\Ecommerce_Backend"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
